@@ -1,6 +1,6 @@
 import scala.concurrent._
 import scala.concurrent.duration._
-import scala.util.{Failure, Random, Success, Try}
+import scala.util.{Failure, Random, Success}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.postfixOps
 
@@ -58,7 +58,7 @@ object Cafe extends App {
   println("Kitchen starting")
 
   def prepareCappuccino(): Future[Cappuccino] = {
-    val groundCoffee = grind("baked beans")
+    val groundCoffee = grind("arabica beans")
     val heatedWater = heatWater(Water(80))
     val frothedMilk = frothMilk("milk")
 
